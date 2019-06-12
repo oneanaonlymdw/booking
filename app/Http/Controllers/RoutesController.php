@@ -36,7 +36,14 @@ class RoutesController extends Controller
      */
     public function store(Request $request)
     {
- echo $request->pickupPoints;
+ 
+        $routeName = $request->routeOrigin."_".$request->routeEnd;
+        $result = DB::table('routes')->insert(['route_name'=>$routeName,'pickup_points'=>'pickupPoints','drop_points'=>'dropPoints']);
+    if($result == true)
+    {
+        echo "Route Added";
+        
+    }
     }
 
     /**
