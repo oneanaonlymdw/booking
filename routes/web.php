@@ -18,4 +18,4 @@ Route::get('/', function () {
 Route::get('/admin', 'AdminLoginController@index');
 Route::post('/adminlogin', 'AdminLoginController@login');
 Route::get('/admindashboard', 'AdminController@index');
-Route::get('/test', 'AdminController@card');
+Route::resource('route', 'RoutesController');

@@ -17,8 +17,9 @@
 
   <!-- Custom styles for this template-->
   <link href="{{URL::to('/')}}/public/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="{{URL::to('/')}}/public/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-</head>
+  </head>
 
 <body id="page-top">
 
@@ -46,7 +47,12 @@
     <i class="fas fa-fw fa-tachometer-alt"></i>
     <span>Dashboard</span></a>
 </li>
-
+<!-- Nav Item - Tickets -->
+<li class="nav-item">
+  <a class="nav-link" href="charts.html">
+  <i class="fas fa-ticket-alt"></i>
+    <span>Tickets</span></a>
+</li>
 <!-- Divider -->
 <hr class="sidebar-divider">
 
@@ -58,14 +64,19 @@
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-    <i class="fas fa-fw fa-cog"></i>
-    <span>Components</span>
+  <i class="fas fa-road"></i>
+    <span>Routes</span>
   </a>
   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Custom Components:</h6>
-      <a class="collapse-item" href="buttons.html">Buttons</a>
-      <a class="collapse-item" href="cards.html">Cards</a>
+      <h6 class="collapse-header">Routes :</h6>      
+      <a class="collapse-item" href="/booking/route">View</a>
+      <a class="collapse-item" href="cards.html">Add</a>
+      <a class="collapse-item" href="cards.html">Add Pickup Point</a>
+      <a class="collapse-item" href="cards.html">Add Drop Point</a>
+      <a class="collapse-item" href="cards.html">Add Bus</a>
+      <a class="collapse-item" href="cards.html">Remove Bus</a>
+      <a class="collapse-item" href="cards.html">Deleted</a>
     </div>
   </div>
 </li>
@@ -73,16 +84,16 @@
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-    <i class="fas fa-fw fa-wrench"></i>
-    <span>Utilities</span>
+  <i class="fas fa-bus"></i>
+    <span>Buses </span>
   </a>
   <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Custom Utilities:</h6>
-      <a class="collapse-item" href="utilities-color.html">Colors</a>
-      <a class="collapse-item" href="utilities-border.html">Borders</a>
-      <a class="collapse-item" href="utilities-animation.html">Animations</a>
-      <a class="collapse-item" href="utilities-other.html">Other</a>
+      <h6 class="collapse-header">Buses :</h6>
+      <a class="collapse-item" href="utilities-color.html">View</a>
+      <a class="collapse-item" href="utilities-border.html">Add</a>
+      <a class="collapse-item" href="utilities-animation.html">Hide</a>
+      <a class="collapse-item" href="utilities-other.html">Deleted</a>
     </div>
   </div>
 </li>
@@ -98,36 +109,66 @@
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-    <i class="fas fa-fw fa-folder"></i>
-    <span>Pages</span>
+  <i class="fas fa-users"></i>
+    <span>Users</span>
   </a>
   <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Login Screens:</h6>
-      <a class="collapse-item" href="login.html">Login</a>
-      <a class="collapse-item" href="register.html">Register</a>
-      <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+      <h6 class="collapse-header">Users :</h6>
+      <a class="collapse-item" href="login.html">View All</a>
+      <a class="collapse-item" href="register.html">Add</a>
+      <a class="collapse-item" href="forgot-password.html">Deleted</a>
       <div class="collapse-divider"></div>
-      <h6 class="collapse-header">Other Pages:</h6>
-      <a class="collapse-item" href="404.html">404 Page</a>
-      <a class="collapse-item" href="blank.html">Blank Page</a>
+      <h6 class="collapse-header">Other :</h6>
+      <a class="collapse-item" href="404.html">Employee </a>
+      <a class="collapse-item" href="blank.html">Agent</a>
     </div>
   </div>
 </li>
 
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages">
+  <i class="fas fa-chart-area"></i>
+    <span>Reports</span>
+  </a>
+  <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <h6 class="collapse-header">Reports :</h6>
+      <a class="collapse-item" href="login.html">Todays</a>
+      <a class="collapse-item" href="register.html">Date & Bus </a>
+      <a class="collapse-item" href="forgot-password.html">Between Dates</a>
+      <a class="collapse-item" href="forgot-password.html">Between Dates & Bus</a>
+  </div>
+</li>
+
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages3" aria-expanded="true" aria-controls="collapsePages">
+  <i class="fas fa-money-bill-alt"></i>
+    <span>Offers</span>
+  </a>
+  <div id="collapsePages3" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <h6 class="collapse-header">Offers :</h6>
+      <a class="collapse-item" href="login.html">View All</a>
+      <a class="collapse-item" href="register.html">Add New</a>
+      <a class="collapse-item" href="forgot-password.html">Delete</a>
+      <a class="collapse-item" href="forgot-password.html">Deleted</a>
+  </div>
+</li>
+
+
+
 <!-- Nav Item - Charts -->
 <li class="nav-item">
   <a class="nav-link" href="charts.html">
-    <i class="fas fa-fw fa-chart-area"></i>
-    <span>Charts</span></a>
+  <i class="fas fa-comments-dollar"></i>
+    <span>Expense</span></a>
 </li>
 
-<!-- Nav Item - Tables -->
-<li class="nav-item">
-  <a class="nav-link" href="tables.html">
-    <i class="fas fa-fw fa-table"></i>
-    <span>Tables</span></a>
-</li>
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
@@ -384,11 +425,12 @@
       </div>
     </div>
   </div>
+ 
 
-  <!-- Bootstrap core JavaScript-->
+   <!-- Bootstrap core JavaScript-->
   <script src="{{URL::to('/')}}/public/jquery/jquery.min.js"></script>
   <script src="{{URL::to('/')}}/public/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="{{URL::to('/')}}/public/js/tags-input-script.js"></script>
   <!-- Core plugin JavaScript-->
   <script src="{{URL::to('/')}}/public/jquery-easing/jquery.easing.min.js"></script>
 
@@ -402,6 +444,12 @@
   <script src="{{URL::to('/')}}/public/js/demo/chart-area-demo.js"></script>
   <script src="{{URL::to('/')}}/public/js/demo/chart-pie-demo.js"></script>
 
+  <script src="{{URL::to('/')}}/public/datatables/jquery.dataTables.min.js"></script>
+  <script src="{{URL::to('/')}}/public/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="{{URL::to('/')}}/public/js/demo/datatables-demo.js"></script>
+  <script src="{{URL::to('/')}}/public/js/ajax.js"></script>
 </body>
 
 </html>

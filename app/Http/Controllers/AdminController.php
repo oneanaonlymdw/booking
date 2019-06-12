@@ -12,10 +12,5 @@ class AdminController extends Controller
     //   echo  session('AdminLoginMessage');
       return view('admin.adminindex');
    }
-   public function card()
-   {
-   
-    //   echo  session('AdminLoginMessage');
-      return view('admin.card');
-   }
+ 
 }
